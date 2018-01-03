@@ -1,3 +1,3 @@
 
-	Bundle概要：
+	开源OSGI.NET框架学习
 		
