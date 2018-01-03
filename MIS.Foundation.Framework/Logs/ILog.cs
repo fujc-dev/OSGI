@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MIS.Foundation.Framework
 {
     public interface ILog
     {
-        bool IsDebugEnabled { get; }  // 是否启用Debug日志
-        bool IsErrorEnabled { get; }    //是否启用Error日志
-        bool IsFatalEnabled { get; }    //是否启用Fatal日志
-        bool IsInfoEnabled { get; }     //是否启用Info日志
-        bool IsWarnEnabled { get; }   //是否启用Warn日志
+        bool IsDebugEnabled { get; }
+        bool IsErrorEnabled { get; }
+        bool IsFatalEnabled { get; }
+        bool IsInfoEnabled { get; }
+        bool IsWarnEnabled { get; }
 
         void Debug(object message);
         void Debug(object message, Exception exception);

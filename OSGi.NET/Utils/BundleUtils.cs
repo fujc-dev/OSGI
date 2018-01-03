@@ -15,7 +15,6 @@ namespace OSGi.NET.Utils
     internal class BundleUtils
     {
 
-        #region Public Method
         /// <summary>
         /// 程序集是否属于Framework class dll
         /// </summary>
@@ -52,8 +51,5 @@ namespace OSGi.NET.Utils
             var fastZip = new FastZip();
             fastZip.ExtractZip(zipFile, outFolder, string.Empty);
         }
-
-        #endregion
-
     }
 }

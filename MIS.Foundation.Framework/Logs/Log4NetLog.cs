@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MIS.Foundation.Framework
 {
@@ -16,34 +14,50 @@ namespace MIS.Foundation.Framework
         public Log4NetLog(log4net.ILog log)
         {
             if (log == null)
+            {
                 throw new ArgumentNullException("log");
-
+            }
             m_Log = log;
         }
 
         public bool IsDebugEnabled
         {
-            get { return m_Log.IsDebugEnabled; }
+            get
+            {
+                return m_Log.IsDebugEnabled;
+            }
         }
 
         public bool IsErrorEnabled
         {
-            get { return m_Log.IsErrorEnabled; }
+            get
+            {
+                return m_Log.IsErrorEnabled;
+            }
         }
 
         public bool IsFatalEnabled
         {
-            get { return m_Log.IsFatalEnabled; }
+            get
+            {
+                return m_Log.IsFatalEnabled;
+            }
         }
 
         public bool IsInfoEnabled
         {
-            get { return m_Log.IsInfoEnabled; }
+            get
+            {
+                return m_Log.IsInfoEnabled;
+            }
         }
 
         public bool IsWarnEnabled
         {
-            get { return m_Log.IsWarnEnabled; }
+            get
+            {
+                return m_Log.IsWarnEnabled;
+            }
         }
 
 

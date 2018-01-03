@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace MIS.Foundation.Framework
@@ -17,7 +15,6 @@ namespace MIS.Foundation.Framework
         public Log4NetLogFactory()
             : this("log4net.config")
         {
-
         }
 
         public Log4NetLogFactory(string log4netConfig)
@@ -29,13 +26,14 @@ namespace MIS.Foundation.Framework
             }
             else
             {
-                //Disable Performance logger
                 var xmlDoc = new XmlDocument();
                 xmlDoc.Load(ConfigFile);
                 var docElement = xmlDoc.DocumentElement;
                 var perfLogNode = docElement.SelectSingleNode("logger[@name='Performance']");
                 if (perfLogNode != null)
+                {
                     docElement.RemoveChild(perfLogNode);
+                }
                 log4net.Config.XmlConfigurator.Configure(docElement);
             }
         }

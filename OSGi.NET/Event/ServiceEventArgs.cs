@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 using OSGi.NET.Service;
 
@@ -15,12 +14,10 @@ namespace OSGi.NET.Event
         /// 注册服务
         /// </summary>
         public const int REGISTERED = 0x00000001;
-        //public const int MODIFIED = 0x00000002;
         /// <summary>
         /// 取消注册
         /// </summary>
         public const int UNREGISTERING = 0x00000004;
-        //public const int MODIFIED_ENDMATCH = 0x00000008;
 
         /// <summary>
         /// 状态
@@ -78,6 +75,5 @@ namespace OSGi.NET.Event
         {
             return state;
         }
-
     }
 }

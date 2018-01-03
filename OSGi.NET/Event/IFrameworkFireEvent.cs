@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace OSGi.NET.Event
 {
@@ -9,7 +8,7 @@ namespace OSGi.NET.Event
     /// <summary>
     /// 内核触发事件接口
     /// </summary>
-    interface IFrameworkFireEvent
+    internal interface IFrameworkFireEvent
     {
         /// <summary>
         /// 触发服务变更事件
@@ -28,6 +27,5 @@ namespace OSGi.NET.Event
         /// </summary>
         /// <param name="extensionEvent">Extension事件参数</param>
         void FireExtensionEvent(ExtensionEventArgs extensionEvent);
-
     }
 }

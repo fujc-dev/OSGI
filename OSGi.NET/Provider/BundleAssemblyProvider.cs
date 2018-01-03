@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Reflection;
 
 using log4net;
@@ -15,7 +14,6 @@ namespace OSGi.NET.Provider
     /// </summary>
     public static class BundleAssemblyProvider
     {
-        #region Property
         private static ILog log = LogManager.GetLogger(typeof(BundleAssemblyProvider));
 
         /// <summary>
@@ -28,10 +26,6 @@ namespace OSGi.NET.Provider
         /// </summary>
         private static readonly IDictionary<string, Assembly> AllShareRefAssemblyDict;
 
-        #endregion
-
-        #region Constructor
-
         /// <summary>
         /// 静态构造
         /// </summary>
@@ -43,25 +37,20 @@ namespace OSGi.NET.Provider
         }
 
 
-        #endregion
-
-        #region Method
-
-
         /// <summary>
         /// 当前域加载程序集触发事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        static Assembly CurrentDomainAssemblyResolve(object sender, ResolveEventArgs args)
+        private static Assembly CurrentDomainAssemblyResolve(object sender, ResolveEventArgs args)
         {
             var assembly = GetAssembly(args.Name);
             if (assembly == null)
             {
-                if (!args.Name.Contains(".resources") //本地化生成
-                    && !args.Name.Contains(".XmlSerializers") //序列化生成
-                    )
+                if (!args.Name.Contains(".resources")
+                    && !args.Name.Contains(".XmlSerializers")
+                )
                 {
                     log.Error(string.Format("程序集[{0}]未加载！", args.Name));
                 }
@@ -76,7 +65,10 @@ namespace OSGi.NET.Provider
         /// <param name="assembly">程序集</param>
         internal static void AddAssembly(string assemblyName, Assembly assembly)
         {
-            if (AllBundleRefAssemblyDict.ContainsKey(assemblyName)) return;
+            if (AllBundleRefAssemblyDict.ContainsKey(assemblyName))
+            {
+                return;
+            }
             AllBundleRefAssemblyDict.Add(assemblyName, assembly);
         }
 
@@ -87,7 +79,9 @@ namespace OSGi.NET.Provider
         internal static void RemoveAssembly(string assemblyName)
         {
             if (AllBundleRefAssemblyDict.ContainsKey(assemblyName))
+            {
                 AllBundleRefAssemblyDict.Remove(assemblyName);
+            }
         }
 
 
@@ -98,7 +92,10 @@ namespace OSGi.NET.Provider
         /// <param name="assembly">程序集</param>
         internal static void AddShareAssembly(string assemblyName, Assembly assembly)
         {
-            if (AllShareRefAssemblyDict.ContainsKey(assemblyName)) return;
+            if (AllShareRefAssemblyDict.ContainsKey(assemblyName))
+            {
+                return;
+            }
             AllShareRefAssemblyDict.Add(assemblyName, assembly);
         }
 
@@ -224,18 +221,18 @@ namespace OSGi.NET.Provider
         /// <returns></returns>
         internal static Assembly GetAssembly(string name)
         {
-            AssemblyName resovleAssemblyName = new AssemblyName(name);
+            var resovleAssemblyName = new AssemblyName(name);
 
-            //1.优先从共享Lib程序集读取
-            //2.其次从BundleLib程序集读取
-            //3.最后从GAC加载
             Assembly assembly = null;
 
             if (CheckHasShareLib(resovleAssemblyName.FullName))
+            {
                 assembly = GetShareAssembly(resovleAssemblyName.FullName);
+            }
             else
+            {
                 assembly = GetBundleLibAssembly(resovleAssemblyName.FullName);
-
+            }
             return assembly ?? GetGacAssembly(resovleAssemblyName.FullName);
         }
 
@@ -250,7 +247,5 @@ namespace OSGi.NET.Provider
 
             return assemblies;
         }
-
-        #endregion
     }
 }

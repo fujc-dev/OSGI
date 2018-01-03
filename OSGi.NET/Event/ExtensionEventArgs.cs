@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using OSGi.NET.Extension;
 
@@ -74,6 +73,5 @@ namespace OSGi.NET.Event
         {
             return extensionData;
         }
-
     }
 }

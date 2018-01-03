@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 using OSGi.NET.Core;
 
@@ -53,6 +52,5 @@ namespace OSGi.NET.Service
         /// </summary>
         /// <returns>Bundle模块列表</returns>
         IList<IBundle> GetUsingBundles();
-
     }
 }

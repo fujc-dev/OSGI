@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle AssemblyName="MIS.ApplicationService" StartLevel="1">
+
+  <ExtensionPoint Point="MIS.ApplicationService.PageFlow" />
+  <ExtensionPoint Point="MIS.ApplicationService.PageNode" />
+</Bundle>

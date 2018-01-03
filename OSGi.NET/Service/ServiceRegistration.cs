@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 using OSGi.NET.Core;
 using OSGi.NET.Core.Root;
 
 namespace OSGi.NET.Service
 {
-  
     /// <summary>
     /// 服务注册信息，用于更新服务属性，反注册服务
     /// </summary>

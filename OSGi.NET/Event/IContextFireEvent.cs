@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using OSGi.NET.Core;
 
@@ -10,7 +9,7 @@ namespace OSGi.NET.Event
     /// <summary>
     /// 模块上下文触发事件接口
     /// </summary>
-    interface IContextFireEvent
+    internal interface IContextFireEvent
     {
         /// <summary>
         /// 触发扩展变更事件
@@ -25,6 +24,5 @@ namespace OSGi.NET.Event
         /// <param name="bundle">引发的模块</param>
         /// <param name="serviceEventArgs">服务事件参数</param>
         void FireServiceChanged(IBundle bundle, ServiceEventArgs serviceEventArgs);
-
     }
 }

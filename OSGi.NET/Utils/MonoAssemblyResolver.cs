@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 using Mono.Cecil;
 
 namespace OSGi.NET.Utils
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
-    class MonoAssemblyResolver
+    internal class MonoAssemblyResolver
     {
         /// <summary>
         /// 程序集定义
@@ -26,14 +25,12 @@ namespace OSGi.NET.Utils
         {
             assembly = AssemblyDefinition.ReadAssembly(assemblyFile);
         }
-
-
     }
 
     /// <summary>
     /// Mono反射器
     /// </summary>
-    class MonoReflector
+    internal class MonoReflector
     {
         /// <summary>
         /// 获取程序集反射器
@@ -56,7 +53,7 @@ namespace OSGi.NET.Utils
     /// <summary>
     /// 程序集反射器
     /// </summary>
-    class MonoAssemblyReflector
+    internal class MonoAssemblyReflector
     {
         private AssemblyDefinition _assembly;
 
@@ -65,7 +62,8 @@ namespace OSGi.NET.Utils
             _assembly = assembly;
         }
 
-        public IEnumerable<MonoAttributeReflector> GetAttributes<T>() where T : Attribute
+        public IEnumerable<MonoAttributeReflector> GetAttributes<T>()
+            where T: Attribute
         {
             if (_assembly.HasCustomAttributes)
             {
@@ -123,7 +121,7 @@ namespace OSGi.NET.Utils
     /// <summary>
     /// 类型反射器
     /// </summary>
-    class MonoTypeReflector
+    internal class MonoTypeReflector
     {
         private TypeDefinition _type;
 
@@ -137,7 +135,8 @@ namespace OSGi.NET.Utils
             return _type.Interfaces.Select(i => new MonoTypeReflector(i.Resolve()));
         }
 
-        public IEnumerable<MonoAttributeReflector> GetAttributes<T>() where T : Attribute
+        public IEnumerable<MonoAttributeReflector> GetAttributes<T>()
+            where T: Attribute
         {
             if (_type.HasCustomAttributes)
             {
@@ -173,14 +172,14 @@ namespace OSGi.NET.Utils
     /// <summary>
     /// 程序集特性反射器
     /// </summary>
-    class MonoAttributeReflector
+    internal class MonoAttributeReflector
     {
         /// <summary>
         /// 自定义特性
         /// </summary>
         private CustomAttribute _attribute;
         /// <summary>
-        /// 
+        ///
         /// </summary>
         private IDictionary<string, string> _values;
 

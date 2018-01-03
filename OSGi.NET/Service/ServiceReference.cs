@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 using OSGi.NET.Core;
 
@@ -60,7 +59,9 @@ namespace OSGi.NET.Service
         public object GetProperty(string key)
         {
             if (properties.ContainsKey(key))
+            {
                 return properties[key];
+            }
             return null;
         }
 
@@ -81,7 +82,7 @@ namespace OSGi.NET.Service
         /// <param name="propertyDictionary">服务属性字典</param>
         public void SetProperties(IDictionary<string, object> propertyDictionary)
         {
-            this.properties = propertyDictionary;
+            properties = propertyDictionary;
         }
 
         /// <summary>

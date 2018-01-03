@@ -1,0 +1,14 @@
+D:\Github\OSGI\MIS.ClientUI\bin\Debug\Bundles\MIS.Workbench\MIS.Workbench.dll
+D:\Github\OSGI\MIS.ClientUI\bin\Debug\Bundles\MIS.Workbench\MIS.Workbench.pdb
+D:\Github\OSGI\MIS.Shell\bin\Debug\Bundles\MIS.Workbench\Manifest.xml
+D:\Github\OSGI\MIS.Shell\bin\Debug\Bundles\MIS.Workbench\MIS.Workbench.dll
+D:\Github\OSGI\MIS.Shell\bin\Debug\Bundles\MIS.Workbench\MIS.Workbench.pdb
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench.csprojResolveAssemblyReference.cache
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MainWindow.baml
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MainWindow.g.cs
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench_MarkupCompile.cache
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench.g.resources
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench.Properties.Resources.resources
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench.csproj.GenerateResource.Cache
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench.dll
+D:\Github\OSGI\Bundles\MIS.Workbench\obj\Debug\MIS.Workbench.pdb

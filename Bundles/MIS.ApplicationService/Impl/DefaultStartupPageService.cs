@@ -1,7 +1,6 @@
 ﻿namespace MIS.ApplicationService
 {
     using OSGi.NET.Core;
-    using OSGi.NET.Extension;
     using System;
     using System.Collections.Generic;
 
@@ -15,12 +14,12 @@
         public DefaultStartupPageService(IBundle bundle)
         {
             this.bundle = bundle;
-            this.HandleStartupPage();
+            HandleStartupPage();
         }
 
         private void HandleStartupPage()
         {
-            IList<ExtensionData> extensions = this.bundle.GetExtensionDatas();
+            var extensions = bundle.GetExtensionDatas();
             foreach (var item in extensions)
             {
                 if (item.Name.Equals(MIS_APPLICATION_SERVICE_STARTUP))
@@ -33,10 +32,13 @@
             }
         }
 
-        private string _ClassReflection = "";
+        private string _ClassReflection = string.Empty;
         public string ClassReflection
         {
-            get { return _ClassReflection; }
+            get
+            {
+                return _ClassReflection;
+            }
         }
 
 
@@ -44,7 +46,10 @@
 
         public IBundle Owner
         {
-            get { return this.bundle; }
+            get
+            {
+                return bundle;
+            }
         }
     }
 }

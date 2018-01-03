@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using OSGi.NET.Core;
 
 namespace OSGi.NET.Event
@@ -22,13 +21,10 @@ namespace OSGi.NET.Event
         /// 已停止
         /// </summary>
         public const int STOPPED = 0x00000004;
-        //public const int UPDATED = 0x00000008;
-        //public const int UNINSTALLED = 0x00000010;
         /// <summary>
         /// 已装载
         /// </summary>
         public const int RESOLVED = 0x00000020;
-        //public const int UNRESOLVED = 0x00000040;
         /// <summary>
         /// 启动中
         /// </summary>
@@ -37,7 +33,6 @@ namespace OSGi.NET.Event
         /// 暂停中
         /// </summary>
         public const int STOPPING = 0x00000100;
-        //public const int LAZY_ACTIVATION = 0x00000200;
 
         /// <summary>
         /// 状态

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using OSGi.NET.Service;
 
@@ -10,7 +9,7 @@ namespace OSGi.NET.Core.Root
     /// <summary>
     /// 框架内核服务接口
     /// </summary>
-    interface IFrameworkService
+    internal interface IFrameworkService
     {
         /// <summary>
         /// 注册一个公开的服务对象
@@ -73,6 +72,5 @@ namespace OSGi.NET.Core.Root
         /// <param name="properties">服务属性</param>
         /// <returns>服务引用列表</returns>
         IList<IServiceReference> GetServiceReferences(string contract, IDictionary<string, object> properties);
-
     }
 }

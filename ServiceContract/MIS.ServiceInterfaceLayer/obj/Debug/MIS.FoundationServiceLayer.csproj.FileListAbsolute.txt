@@ -1,0 +1,6 @@
+D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\bin\Debug\MIS.FoundationServiceLayer.dll
+D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\bin\Debug\MIS.FoundationServiceLayer.pdb
+D:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.FoundationServiceLayer.dll
+D:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.FoundationServiceLayer.pdb
+D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.dll
+D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.pdb

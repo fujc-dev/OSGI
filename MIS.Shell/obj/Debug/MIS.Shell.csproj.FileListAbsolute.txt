@@ -1,0 +1,16 @@
+D:\Github\OSGI\MIS.Shell\bin\Debug\MIS.Shell.exe.config
+D:\Github\OSGI\MIS.Shell\bin\Debug\MIS.Shell.exe
+D:\Github\OSGI\MIS.Shell\bin\Debug\MIS.Shell.pdb
+D:\Github\OSGI\MIS.Shell\bin\Debug\log4net.dll
+D:\Github\OSGI\MIS.Shell\bin\Debug\OSGi.NET.dll
+D:\Github\OSGI\MIS.Shell\bin\Debug\Mono.Cecil.dll
+D:\Github\OSGI\MIS.Shell\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Github\OSGI\MIS.Shell\bin\Debug\OSGi.NET.pdb
+D:\Github\OSGI\MIS.Shell\bin\Debug\log4net.xml
+D:\Github\OSGI\MIS.Shell\obj\Debug\MIS.Shell.csprojResolveAssemblyReference.cache
+D:\Github\OSGI\MIS.Shell\obj\Debug\App.g.cs
+D:\Github\OSGI\MIS.Shell\obj\Debug\MIS.Shell_MarkupCompile.cache
+D:\Github\OSGI\MIS.Shell\obj\Debug\MIS.Shell.Properties.Resources.resources
+D:\Github\OSGI\MIS.Shell\obj\Debug\MIS.Shell.csproj.GenerateResource.Cache
+D:\Github\OSGI\MIS.Shell\obj\Debug\MIS.Shell.exe
+D:\Github\OSGI\MIS.Shell\obj\Debug\MIS.Shell.pdb

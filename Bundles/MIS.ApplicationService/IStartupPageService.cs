@@ -14,7 +14,7 @@ namespace MIS.ApplicationService
         String ClassReflection { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IBundle Owner { get; }
     }

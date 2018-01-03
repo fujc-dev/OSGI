@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
 using System.IO;
 using System.Xml;
 
@@ -14,7 +13,6 @@ namespace OSGi.NET.Provider
     /// </summary>
     internal static class BundleConfigProvider
     {
-        #region Property
 
         /// <summary>
         /// OSGi配置文件名称常量
@@ -118,10 +116,6 @@ namespace OSGi.NET.Provider
         /// </summary>
         private const string AssemblyName = "AssemblyName";
 
-        #endregion
-
-        #region Constructor
-
         /// <summary>
         /// 静态构造
         /// </summary>
@@ -134,44 +128,50 @@ namespace OSGi.NET.Provider
             LoadFrameworkConfig();
 
             if (FrameworkConfiguration.ContainsKey(OSGi_NET_ALL_TYPES_LOAD))
+            {
                 OSGi_NET_ALLTYPES_LOAD = FrameworkConfiguration[OSGi_NET_ALL_TYPES_LOAD].Trim() == "1";
-
+            }
             if (FrameworkConfiguration.ContainsKey(OSGi_NET_DEBUG_MODE))
+            {
                 OSGi_NET_IS_DEBUG_MODE = FrameworkConfiguration[OSGi_NET_DEBUG_MODE].Trim() == "1";
-
+            }
             if (FrameworkConfiguration.ContainsKey(OSGi_NET_SINGLE_RUNNING))
+            {
                 OSGi_NET_SINGLERUNNING = FrameworkConfiguration[OSGi_NET_SINGLE_RUNNING].Trim() == "1";
+            }
         }
-
-        #endregion
-
-        #region Method
 
         /// <summary>
         /// 读取框架配置
         /// </summary>
-        static void LoadFrameworkConfig()
+        private static void LoadFrameworkConfig()
         {
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
 
             var fileNameInConfig = ConfigurationManager.AppSettings["OSGiConfigFile"];
             if (false == string.IsNullOrWhiteSpace(fileNameInConfig))
+            {
                 OSGi_NET_CONFIG = fileNameInConfig;
-
+            }
             FrameworkConfiguration = new Dictionary<string, string>();
-            string configFileName = Path.Combine(Environment.CurrentDirectory, OSGi_NET_CONFIG);
+            var configFileName = Path.Combine(Environment.CurrentDirectory, OSGi_NET_CONFIG);
             if (File.Exists(configFileName))
             {
-                //读取properties文件
-                string[] lines = File.ReadAllLines(configFileName);
+                var lines = File.ReadAllLines(configFileName);
                 foreach (string line in lines)
                 {
-                    string templine = line.Trim();
-                    if (string.IsNullOrEmpty(line) || templine.StartsWith("#")) continue;
-                    int equalIndex = templine.IndexOf("=", StringComparison.Ordinal);
-                    if (equalIndex <= 0) continue;
-                    string key = line.Substring(0, equalIndex);
-                    string value = line.Substring(equalIndex + 1);
+                    var templine = line.Trim();
+                    if (string.IsNullOrEmpty(line) || templine.StartsWith("#"))
+                    {
+                        continue;
+                    }
+                    var equalIndex = templine.IndexOf("=", StringComparison.Ordinal);
+                    if (equalIndex <= 0)
+                    {
+                        continue;
+                    }
+                    var key = line.Substring(0, equalIndex);
+                    var value = line.Substring(equalIndex + 1);
                     FrameworkConfiguration.Add(key, value.Trim());
                 }
             }
@@ -183,7 +183,7 @@ namespace OSGi.NET.Provider
         internal static void LoadBundlesConfig(string bundlesPath)
         {
             BundlesConfiguration = new Dictionary<string, XmlNode>();
-            string bundlesPathName = Path.Combine(Environment.CurrentDirectory, bundlesPath);
+            var bundlesPathName = Path.Combine(Environment.CurrentDirectory, bundlesPath);
             if (Directory.Exists(bundlesPathName))
             {
                 var directory = new DirectoryInfo(bundlesPathName);
@@ -195,24 +195,24 @@ namespace OSGi.NET.Provider
                     {
                         var xmlDoc = new XmlDocument();
                         xmlDoc.Load(bundleConfigFilePath);
-                        //Key为文件目录，Value为配置节点
                         tempConfiguration.Add(directoryInfo.Name, xmlDoc.DocumentElement);
                     }
                 }
 
-                //按加载级别顺序读取Bundles配置
                 var sorted = tempConfiguration.OrderBy(
-                    d =>
+                d =>
+                {
+                    var index = 0;
+                    if (d.Value.Attributes != null)
                     {
-                        var index = 0;
-                        if (d.Value.Attributes != null)
+                        var bundleIndex = d.Value.Attributes[StartLevel];
+                        if (bundleIndex != null)
                         {
-                            //根据启动级别设置加载Bundle
-                            var bundleIndex = d.Value.Attributes[StartLevel];
-                            if (bundleIndex != null) int.TryParse(bundleIndex.Value, out index);
+                            int.TryParse(bundleIndex.Value, out index);
                         }
-                        return index;
-                    });
+                    }
+                    return index;
+                });
 
                 foreach (var keyValuePair in sorted)
                 {
@@ -252,23 +252,27 @@ namespace OSGi.NET.Provider
             var tempConfiguration = new Dictionary<string, XmlNode>(BundlesConfiguration);
 
             if (!tempConfiguration.ContainsKey(bundleKey))
+            {
                 tempConfiguration.Add(bundleKey, xmlNode);
+            }
             else
+            {
                 tempConfiguration[bundleKey] = xmlNode;
-
-            //按加载级别顺序读取Bundles配置
+            }
             var sorted = tempConfiguration.OrderBy(
-                d =>
+            d =>
+            {
+                var index = 0;
+                if (d.Value.Attributes != null)
                 {
-                    var index = 0;
-                    if (d.Value.Attributes != null)
+                    var bundleIndex = d.Value.Attributes[StartLevel];
+                    if (bundleIndex != null)
                     {
-                        //根据启动级别设置加载Bundle
-                        var bundleIndex = d.Value.Attributes[StartLevel];
-                        if (bundleIndex != null) int.TryParse(bundleIndex.Value, out index);
+                        int.TryParse(bundleIndex.Value, out index);
                     }
-                    return index;
-                });
+                }
+                return index;
+            });
 
             BundlesConfiguration = new Dictionary<string, XmlNode>();
             foreach (var keyValuePair in sorted)
@@ -284,8 +288,9 @@ namespace OSGi.NET.Provider
         internal static void RemoveBundleConfig(string bundleKey)
         {
             if (BundlesConfiguration.ContainsKey(bundleKey))
+            {
                 BundlesConfiguration.Remove(bundleKey);
-
+            }
         }
 
 
@@ -324,18 +329,19 @@ namespace OSGi.NET.Provider
         /// <returns></returns>
         internal static string GetBundlesDirectory()
         {
-
-            if (FrameworkConfiguration == null) return string.Empty;
-
+            if (FrameworkConfiguration == null)
+            {
+                return string.Empty;
+            }
             var bundlesDirectoryPath = string.Empty;
-            // 插件目录
             if (FrameworkConfiguration.ContainsKey(OSGi_NET_BUNDLE_STORAGE))
+            {
                 bundlesDirectoryPath = Path.Combine(Environment.CurrentDirectory, FrameworkConfiguration[OSGi_NET_BUNDLE_STORAGE]);
-
-            // 缺省目录
+            }
             if (string.IsNullOrEmpty(bundlesDirectoryPath))
+            {
                 bundlesDirectoryPath = Path.Combine(Environment.CurrentDirectory, OSGi_NET_BUNDLE_DIRECTORY_NAME);
-
+            }
             return bundlesDirectoryPath;
         }
 
@@ -345,18 +351,20 @@ namespace OSGi.NET.Provider
         /// <returns></returns>
         internal static string GetShareLibsDirectory()
         {
-            if (FrameworkConfiguration == null) return string.Empty;
-
+            if (FrameworkConfiguration == null)
+            {
+                return string.Empty;
+            }
             var shareLibsDirectoryPath = string.Empty;
 
-            // 共享程序集目录
             if (FrameworkConfiguration.ContainsKey(OSGi_NET_SHARELIB_STORAGE))
+            {
                 shareLibsDirectoryPath = Path.Combine(Environment.CurrentDirectory, FrameworkConfiguration[OSGi_NET_SHARELIB_STORAGE]);
-
-            // 共享程序集目录
+            }
             if (string.IsNullOrEmpty(shareLibsDirectoryPath))
+            {
                 shareLibsDirectoryPath = Path.Combine(Environment.CurrentDirectory, OSGi_NET_SHARELIB_DIRECTORY_NAME);
-
+            }
             return shareLibsDirectoryPath;
         }
 
@@ -366,18 +374,20 @@ namespace OSGi.NET.Provider
         /// <returns></returns>
         internal static string GetBundlesUninstallDirectory()
         {
-            if (FrameworkConfiguration == null) return string.Empty;
-
+            if (FrameworkConfiguration == null)
+            {
+                return string.Empty;
+            }
             var bundlesUninstallPath = string.Empty;
 
-            // 程序集卸载缓存目录
             if (FrameworkConfiguration.ContainsKey(OSGi_NET_UNINSTALL_STORAGE))
+            {
                 bundlesUninstallPath = Path.Combine(Environment.CurrentDirectory, FrameworkConfiguration[OSGi_NET_UNINSTALL_STORAGE]);
-
-            // 程序集卸载缓存目录
+            }
             if (string.IsNullOrEmpty(bundlesUninstallPath))
+            {
                 bundlesUninstallPath = Path.Combine(Environment.CurrentDirectory, OSGi_NET_UNINSTALL_DIRECTORY_NAME);
-
+            }
             return bundlesUninstallPath;
         }
 
@@ -389,7 +399,10 @@ namespace OSGi.NET.Provider
         /// <returns></returns>
         internal static string GetBundleConfigAssemblyName(XmlNode xmlNode)
         {
-            if (xmlNode.Attributes == null) return string.Empty;
+            if (xmlNode.Attributes == null)
+            {
+                return string.Empty;
+            }
             var assemblyNameNode = xmlNode.Attributes[AssemblyName];
             var tmpassemblyName = assemblyNameNode == null ? string.Empty : assemblyNameNode.Value;
             return tmpassemblyName;
@@ -403,7 +416,10 @@ namespace OSGi.NET.Provider
         internal static int GetBundleConfigStartLevel(XmlNode xmlNode)
         {
             var bundleIndex = 0;
-            if (xmlNode.Attributes == null) return bundleIndex;
+            if (xmlNode.Attributes == null)
+            {
+                return bundleIndex;
+            }
             var startLevelNode = xmlNode.Attributes[StartLevel];
             var startLevel = startLevelNode == null ? string.Empty : startLevelNode.Value;
             int.TryParse(startLevel, out bundleIndex);
@@ -423,11 +439,16 @@ namespace OSGi.NET.Provider
             {
                 if (childNode.Name.ToLower() == "ExtensionPoint".ToLower())
                 {
-                    if (childNode.Attributes == null) continue;
+                    if (childNode.Attributes == null)
+                    {
+                        continue;
+                    }
                     var extensionPointAttr = childNode.Attributes["Point"];
                     var extensionPoint = extensionPointAttr == null ? string.Empty : extensionPointAttr.Value;
                     if (!extensionPoints.Contains(extensionPoint))
+                    {
                         extensionPoints.Add(extensionPoint);
+                    }
                 }
             }
             return extensionPoints;
@@ -445,7 +466,10 @@ namespace OSGi.NET.Provider
             {
                 if (childNode.Name.ToLower() == "Extension".ToLower())
                 {
-                    if (childNode.Attributes == null) continue;
+                    if (childNode.Attributes == null)
+                    {
+                        continue;
+                    }
                     var extensionPointAttr = childNode.Attributes["Point"];
                     var extensionPoint = extensionPointAttr == null ? string.Empty : extensionPointAttr.Value;
                     if (!extensionDatas.ContainsKey(extensionPoint))
@@ -462,7 +486,5 @@ namespace OSGi.NET.Provider
             }
             return extensionDatas;
         }
-
-        #endregion
     }
 }

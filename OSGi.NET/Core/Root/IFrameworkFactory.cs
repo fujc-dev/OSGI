@@ -1,32 +1,27 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using OSGi.NET.Extension;
 
 namespace OSGi.NET.Core.Root
 {
     /// <summary>
-    /// 框架内核构造工厂
-    /// </summary>
+    /// 妗嗘灦鍐呮牳鏋勯€犲伐鍘?    /// </summary>
     public interface IFrameworkFactory
     {
         /// <summary>
-        /// 创建一个框架内核实例
-        /// </summary>
-        /// <returns>框架内核实例</returns>
+        /// 鍒涘缓涓€涓鏋跺唴鏍稿疄渚?        /// </summary>
+        /// <returns>妗嗘灦鍐呮牳瀹炰緥</returns>
         IFramework CreateFramework();
 
         /// <summary>
-        /// 创建一个框架内核实例,扩展点支持
-        /// </summary>
-        /// <returns>框架内核实例</returns>
+        /// 鍒涘缓涓€涓鏋跺唴鏍稿疄渚?鎵╁睍鐐规敮鎸?        /// </summary>
+        /// <returns>妗嗘灦鍐呮牳瀹炰緥</returns>
         IFramework CreateFramework(IList<ExtensionPoint> extensionPoints);
 
         /// <summary>
-        /// 创建一个框架内核实例,扩展数据支持
+        /// 鍒涘缓涓€涓鏋跺唴鏍稿疄渚?鎵╁睍鏁版嵁鏀寔
         /// </summary>
-        /// <returns>框架内核实例</returns>
+        /// <returns>妗嗘灦鍐呮牳瀹炰緥</returns>
         IFramework CreateFramework(IList<ExtensionData> extensionDatas);
-
     }
 }

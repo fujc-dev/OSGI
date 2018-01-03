@@ -1,0 +1,19 @@
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\OSGi.NET.XML
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\OSGi.NET.dll
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\OSGi.NET.pdb
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\log4net.dll
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\Mono.Cecil.dll
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\bin\Debug\log4net.xml
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\obj\Debug\OSGi.NET.dll
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\obj\Debug\OSGi.NET.pdb
+C:\Users\dane\Downloads\OSGi.NET-master\OSGi.NET Client\OSGi.NET\obj\Debug\OSGi.NET.csprojResolveAssemblyReference.cache
+D:\Github\OSGI\OSGi.NET\bin\Debug\OSGi.NET.dll
+D:\Github\OSGI\OSGi.NET\bin\Debug\OSGi.NET.pdb
+D:\Github\OSGI\OSGi.NET\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Github\OSGI\OSGi.NET\bin\Debug\log4net.dll
+D:\Github\OSGI\OSGi.NET\bin\Debug\Mono.Cecil.dll
+D:\Github\OSGI\OSGi.NET\bin\Debug\log4net.xml
+D:\Github\OSGI\OSGi.NET\obj\Debug\OSGi.NET.dll
+D:\Github\OSGI\OSGi.NET\obj\Debug\OSGi.NET.pdb
+D:\Github\OSGI\OSGi.NET\obj\Debug\OSGi.NET.csprojResolveAssemblyReference.cache

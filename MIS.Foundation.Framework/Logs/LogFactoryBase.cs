@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MIS.Foundation.Framework
 {
@@ -12,7 +10,6 @@ namespace MIS.Foundation.Framework
     /// </summary>
     public abstract class LogFactoryBase : ILogFactory
     {
-
         protected string ConfigFile { get; private set; }
 
         protected bool IsSharedConfig { get; private set; }
@@ -60,7 +57,6 @@ namespace MIS.Foundation.Framework
                 return;
             }
             ConfigFile = configFile;
-            return;
         }
 
         public abstract ILog GetLog(string name);

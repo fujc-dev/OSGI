@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using OSGi.NET.Listener;
 
@@ -10,7 +9,7 @@ namespace OSGi.NET.Core.Root
     /// <summary>
     /// 框架内核监听器接口
     /// </summary>
-    interface IFrameworkListener
+    internal interface IFrameworkListener
     {
         /// <summary>
         /// 添加一个Bundle监听器
@@ -47,6 +46,5 @@ namespace OSGi.NET.Core.Root
         /// </summary>
         /// <param name="listener">服务监听器</param>
         void RemoveServiceListener(IServiceListener listener);
-
     }
 }

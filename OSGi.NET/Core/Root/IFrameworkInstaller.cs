@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace OSGi.NET.Core.Root
 {
@@ -9,7 +8,7 @@ namespace OSGi.NET.Core.Root
     /// <summary>
     /// 框架内核安装器接口
     /// </summary>
-    interface IFrameworkInstaller
+    internal interface IFrameworkInstaller
     {
 
         /// <summary>

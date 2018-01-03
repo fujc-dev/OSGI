@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle AssemblyName="MIS.ClientUI" StartLevel="1">
+  <!--为主窗体插件定义扩展点，为后续子模块扩展-->
+  <ExtensionPoint Point="MIS.Shell.Application" />
+  <Extension Point="MIS.ApplicationService.Startup">
+    <Startup Value="MIS.ClientUI.MISLogin" />
+  </Extension>
+</Bundle>
