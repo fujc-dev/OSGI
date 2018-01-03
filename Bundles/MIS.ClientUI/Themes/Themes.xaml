@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Generate.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISPager.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISImageButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLinkButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginPassword.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginTextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/ExpanderUIItem.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/NavigationUIItem.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/CustomAccordion.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

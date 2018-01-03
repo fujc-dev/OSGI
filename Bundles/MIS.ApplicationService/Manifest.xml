@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle AssemblyName="MIS.ApplicationService" StartLevel="1">
+
+  <!--页面节点的扩展点，用于匹配当前插件项目中包含的-->
+  <ExtensionPoint Point="MIS.ApplicationService.Startup" />
+
+</Bundle>
