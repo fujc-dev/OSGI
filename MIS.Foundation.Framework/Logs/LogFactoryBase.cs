@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZHGL.Utils
+namespace MIS.Foundation.Framework
 {
     /// <summary>
     /// LogFactory 基类

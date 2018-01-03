@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace ZHGL.Utils
+namespace MIS.Foundation.Framework
 {
     /// <summary>
     /// Log4NetLogFactory

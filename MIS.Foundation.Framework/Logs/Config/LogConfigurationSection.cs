@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZHGL.Utils.Logging.Config
+namespace MIS.Foundation.Framework
 {
     public class LogConfigurationSection : ConfigurationSection
     {
