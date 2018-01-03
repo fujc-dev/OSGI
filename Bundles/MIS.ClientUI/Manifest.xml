@@ -3,6 +3,6 @@
   <!--为主窗体插件定义扩展点，为后续子模块扩展-->
   <ExtensionPoint Point="MIS.Shell.Application" />
   <Extension Point="MIS.ApplicationService.Startup">
-    <Startup Value="MIS.ClientUI.MainWindow" />
+    <Startup Value="MIS.ClientUI.MISLogin" />
   </Extension>
 </Bundle>

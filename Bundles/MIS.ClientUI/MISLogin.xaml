@@ -8,7 +8,22 @@
 	x:Name="Window"
 	Title="MISLogin"
 	Width="575" Height="405" WindowStyle="None" ResizeMode="NoResize">
-
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/CustomAccordion.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Generate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISPager.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISImageButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLinkButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginPassword.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginTextBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/ExpanderUIItem.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/NavigationUIItem.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid x:Name="LayoutRoot" Background="#FF1C77AC">
         <Grid.RowDefinitions>
             <RowDefinition Height="47"/>
