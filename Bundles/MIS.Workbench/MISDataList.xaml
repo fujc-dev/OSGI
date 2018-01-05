@@ -1,11 +1,59 @@
-﻿<UserControl x:Class="MIS.Workbench.MISDataList"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MIS.UI.Framework.Controls;assembly=MIS.UI.Framework" 
+			 x:Class="MIS.Workbench.MISDataList" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="800" d:DesignWidth="800">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Themes/MISDataGrid.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Themes/Generate.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Controls/MISPager.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Controls/MISLinkButton.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MIS.Workbench;component/DataSource.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="221*"/>
+			<RowDefinition Height="68*"/>
+			<RowDefinition Height="111*"/>
+		</Grid.RowDefinitions>
+		<DataGrid  
+			ItemsSource="{Binding Source={StaticResource XmlDataSource}, XPath=/News/New}" Margin="0,0,0,9" 
+			AutoGenerateColumns="False"  x:Name="dataGrid1" 
+			CanUserSortColumns="False"  IsReadOnly="False"
+			CanUserResizeColumns="False"
+			CanUserResizeRows="False"  
+			SelectionMode="Single"
+			CanUserReorderColumns="False" 
+			AlternationCount="2" 
+			RowHeaderWidth="0" CanUserAddRows="False">
+			<DataGrid.Columns>
+				<DataGridCheckBoxColumn Width="50" />
+				<DataGridTextColumn Header="编号" Width="100" Binding="{Binding XPath=Id}"/>
+				<DataGridTextColumn Header="标题"  Width="100" Binding="{Binding XPath=Title}"/>
+				<DataGridTextColumn Header="用户"  Width="100"  Binding="{Binding XPath=User}"/>
+				<DataGridTextColumn Header="籍贯" Width="100"   Binding="{Binding XPath=Nativelace}"/>
+				<DataGridTextColumn Header="发布时间" Width="100"   Binding="{Binding XPath=CreateTime}"/>
+				<DataGridTextColumn Header="是否审核" Width="100"   Binding="{Binding XPath=Auditing}"/>
+				<DataGridTemplateColumn Header="操作" Width="100"  >
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+								<Controls:MISLinkButton Style="{DynamicResource DefaultLinkButtonStyle}" Content="查看" LBForeground="Blue"/>
+                                <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButtonStyle}" Content="删除" LBForeground="Blue"/>
+							</StackPanel>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Controls:MISPager Style="{DynamicResource MISDefaultDataPagerStyle}" Total="9999" HorizontalAlignment="Left" Height="35" Margin="62,36,0,0" Grid.Row="1" VerticalAlignment="Top" Width="644"/>
+	</Grid>
 </UserControl>

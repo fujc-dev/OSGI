@@ -25,4 +25,3 @@ E:\Github\OSGI\OSGi.NET\bin\Debug\Mono.Cecil.dll
 E:\Github\OSGI\OSGi.NET\bin\Debug\log4net.xml
 E:\Github\OSGI\OSGi.NET\obj\Debug\OSGi.NET.dll
 E:\Github\OSGI\OSGi.NET\obj\Debug\OSGi.NET.pdb
-E:\Github\OSGI\OSGi.NET\obj\Debug\OSGi.NET.csprojResolveAssemblyReference.cache

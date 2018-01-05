@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<XmlDataProvider x:Key="XmlDataSource">
+		<x:XData>
+			<News  xmlns="">
+				<New>
+					<Id>20130908</Id>
+					<Title>王金平幕僚：马英九声明字字见血 人活着没意思</Title>
+					<User>admin</User>
+					<Nativelace>江苏南京</Nativelace>
+					<CreateTime>2013-09-09 15:05</CreateTime>
+					<Auditing>已审核</Auditing>
+				</New>
+				<New>
+					<Id>20130908</Id>
+					<Title>温州19名小学生中毒流鼻血续：周边部分企业关停</Title>
+					<User>admin</User>
+					<Nativelace>江苏南京</Nativelace>
+					<CreateTime>2013-09-09 15:05</CreateTime>
+					<Auditing>已审核</Auditing>
+				</New>
+				<New>
+					<Id>20130908</Id>
+					<Title>温州19名小学生中毒流鼻血续：周边部分企业关停</Title>
+					<User>admin</User>
+					<Nativelace>江苏南京</Nativelace>
+					<CreateTime>2013-09-09 15:05</CreateTime>
+					<Auditing>已审核</Auditing>
+				</New>
+				<New>
+					<Id>20130908</Id>
+					<Title>温州19名小学生中毒流鼻血续：周边部分企业关停</Title>
+					<User>admin</User>
+					<Nativelace>江苏南京</Nativelace>
+					<CreateTime>2013-09-09 15:05</CreateTime>
+					<Auditing>已审核</Auditing>
+				</New>
+				<New>
+					<Id>20130908</Id>
+					<Title>温州19名小学生中毒流鼻血续：周边部分企业关停</Title>
+					<User>admin</User>
+					<Nativelace>江苏南京</Nativelace>
+					<CreateTime>2013-09-09 15:05</CreateTime>
+					<Auditing>已审核</Auditing>
+				</New>
+				<New>
+					<Id>20130908</Id>
+					<Title>温州19名小学生中毒流鼻血续：周边部分企业关停</Title>
+					<User>admin</User>
+					<Nativelace>江苏南京</Nativelace>
+					<CreateTime>2013-09-09 15:05</CreateTime>
+					<Auditing>已审核</Auditing>
+				</New>
+			</News>
+		</x:XData>
+	</XmlDataProvider>
+</ResourceDictionary>

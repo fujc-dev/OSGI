@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="MISDataList.xaml.cs">
       <DependentUpon>MISDataList.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="MISWorkbenchBundle.xaml.cs">
       <DependentUpon>MISWorkbenchBundle.xaml</DependentUpon>
@@ -122,6 +123,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DataSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MISDataList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

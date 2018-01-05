@@ -5,7 +5,7 @@
     <Module Title="工作台" ToolTip="工作台" Icon="MIS.Workbench.Resources.icon01.png">
       <Menu Text="管理信息" ToolTip="管理信息" Icon="MIS.Workbench.Resources.leftico01.png" >
         <MenuItem  Text="首页模版" ToolTip="首页模版" Class="MIS.Workbench.MISWorkbenchBundle"/>
-        <MenuItem  Text="数据列表" ToolTip="数据列表" Class=""/>
+        <MenuItem  Text="数据列表" ToolTip="数据列表" Class="MIS.Workbench.MISDataList"/>
         <MenuItem  Text="图片数据表" ToolTip="图片数据表" Class=""/>
       </Menu>
       <Menu Text="其他设置" ToolTip="其他设置" Icon="MIS.Workbench.Resources.leftico02.png">

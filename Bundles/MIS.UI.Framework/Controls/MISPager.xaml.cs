@@ -55,7 +55,7 @@ namespace MIS.UI.Framework.Controls
                         Content = (i + 1).ToString(),
                         Width = 35,
                         BorderThickness = new Thickness(1, 0, 0, 0),
-                        Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style
+                        Style = this.FindResource("DefaultLinkButton2Style") as Style
                     };
                     mCurrentPagers.Add((i + 1));
                     misImgBtn.Click += OnMisImgBtn_Click;
@@ -70,7 +70,7 @@ namespace MIS.UI.Framework.Controls
                 mPagerType = PagerType.Complex;
                 for (var i = 0; i < 5; i++)
                 {
-                    var misImgBtn = new MISLinkButton() { Content = (i + 1).ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style };
+                    var misImgBtn = new MISLinkButton() { Content = (i + 1).ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = this.FindResource("DefaultLinkButton2Style") as Style };
                     misImgBtn.Click += OnMisImgBtn_Click;
                     if (i.Equals(0))
                     {
@@ -86,8 +86,8 @@ namespace MIS.UI.Framework.Controls
                         PART_Content.Children.Add(misImgBtn);
                     }
                 }
-                PART_Content.Children.Add(new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton3Style") as Style });
-                PART_Content.Children.Add(new MISLinkButton() { Content = PageCount.ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style });
+                PART_Content.Children.Add(new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = this.FindResource("DefaultLinkButton3Style") as Style });
+                PART_Content.Children.Add(new MISLinkButton() { Content = PageCount.ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = this.FindResource("DefaultLinkButton2Style") as Style });
             }
             SetLinkButtonFocus(0);
             _SetNextpageAndPreviouspageState();
@@ -242,7 +242,7 @@ namespace MIS.UI.Framework.Controls
                     if (!mCurrentIsAddEllipsisCtrl)
                     {
                         mCurrentIsAddEllipsisCtrl = true;
-                        PART_Content.Children.Insert(0, new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton3Style") as Style });
+                        PART_Content.Children.Insert(0, new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = this.FindResource("DefaultLinkButton3Style") as Style });
                     }
                     _RefreshPager(AddSubtract.Add);
                     _MaintainCurrentPagers(AddSubtract.Add);
@@ -420,7 +420,7 @@ namespace MIS.UI.Framework.Controls
                     if (!mCurrentIsAddEllipsisCtrl)
                     {
                         mCurrentIsAddEllipsisCtrl = true;
-                        PART_Content.Children.Insert(0, new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton3Style") as Style });
+                        PART_Content.Children.Insert(0, new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = this.FindResource("DefaultLinkButton3Style") as Style });
                     }
                     _RefreshPager(AddSubtract.Add);
                     _MaintainCurrentPagers(AddSubtract.Add);
