@@ -33,9 +33,16 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +50,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Http\BaseWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Http\Config\HttpConfigurationElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\Config\HttpConfigurationSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\DefaultHttpImp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\IHttp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\Method.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\RequestParams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\ResultInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\ResultState.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="IFramework.cs" />
     <Compile Include="Logs\Config\LogConfigurationSection.cs" />
     <Compile Include="Logs\Config\LogConfigurationSectionElement.cs" />
@@ -51,9 +94,16 @@
     <Compile Include="Logs\Log4NetLog.cs" />
     <Compile Include="Logs\Log4NetLogFactory.cs" />
     <Compile Include="Logs\LogFactoryBase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MesageQueues\IMessage.cs" />
     <Compile Include="MesageQueues\IPusher.cs" />
+    <Compile Include="Queues\IMessageBus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Queues\MessageExchange.cs" />
+    <Compile Include="Queues\MessageNotifyHandler.cs" />
+    <Compile Include="Queues\NotifyEventArgs.cs" />
+    <Compile Include="ServiceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />

@@ -7,12 +7,12 @@ namespace MIS.Foundation.Framework
 {
     public class LogConfigurationSection : ConfigurationSection
     {
-        [ConfigurationProperty("zhgllog", IsRequired = true)]
-        public LogConfigurationSectionElement ZhglLog
+        [ConfigurationProperty("log4net", IsRequired = true)]
+        public LogConfigurationSectionElement Log4net
         {
             get
             {
-                return (LogConfigurationSectionElement)this["zhgllog"];
+                return (LogConfigurationSectionElement)this["log4net"];
             }
         }
     }

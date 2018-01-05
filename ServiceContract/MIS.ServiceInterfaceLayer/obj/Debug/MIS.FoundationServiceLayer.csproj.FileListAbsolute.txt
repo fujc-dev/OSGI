@@ -4,3 +4,9 @@ D:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.FoundationServiceLayer.dll
 D:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.FoundationServiceLayer.pdb
 D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.dll
 D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.pdb
+D:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.csprojResolveAssemblyReference.cache
+E:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.FoundationServiceLayer.dll
+E:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.FoundationServiceLayer.pdb
+E:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.csprojResolveAssemblyReference.cache
+E:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.dll
+E:\Github\OSGI\ServiceContract\MIS.ServiceInterfaceLayer\obj\Debug\MIS.FoundationServiceLayer.pdb

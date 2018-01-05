@@ -22,22 +22,32 @@ namespace MIS.Shell
         {
             using (var bundleRuntime = new BundleRuntime())
             {
-                bundleRuntime.Start();
-                var pageFlowService = bundleRuntime.GetFirstOrDefaultService("MIS.ApplicationService.IStartupPageService");
-                var type = pageFlowService.GetType();
-                var ClassReflection = type.GetProperty("ClassReflection");
-                var Owner = type.GetProperty("Owner");
-                var o1 = (String)ClassReflection.GetValue(pageFlowService, null);
-                var bundle = (Bundle)Owner.GetValue(pageFlowService, null);
-                var app = Application.Current;
-                app.ShutdownMode = ShutdownMode.OnLastWindowClose;
-                app.MainWindow = bundle.LoadClass(o1) as Window;
-                app.MainWindow.Show();
+                try
+                {
+                    bundleRuntime.Start();
+                    var pageFlowService = bundleRuntime.GetFirstOrDefaultService("MIS.ApplicationService.IStartupPageService");
+                    var type = pageFlowService.GetType();
+                    var ClassReflection = type.GetProperty("ClassReflection");
+                    var Owner = type.GetProperty("Owner");
+                    //获取启动项ClassReflection
+                    var o1 = (String)ClassReflection.GetValue(pageFlowService, null);
+                    var bundle = (Bundle)Owner.GetValue(pageFlowService, null);
+                    var app = Application.Current;
+                    app.ShutdownMode = ShutdownMode.OnLastWindowClose;
+                    app.MainWindow = bundle.LoadClass(o1) as Window;
+                    app.MainWindow.Show();
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
             }
         }
 
         private void App_Exit(object sender, ExitEventArgs e)
         {
+            //
         }
     }
 }

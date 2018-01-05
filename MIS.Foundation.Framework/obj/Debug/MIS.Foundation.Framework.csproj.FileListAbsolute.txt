@@ -17,3 +17,9 @@ D:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.Foundation.Framework.dll
 D:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.Foundation.Framework.pdb
 D:\Github\OSGI\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.dll
 D:\Github\OSGI\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.pdb
+D:\Github\OSGI\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.csprojResolveAssemblyReference.cache
+E:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.Foundation.Framework.dll
+E:\Github\OSGI\MIS.Shell\bin\Debug\Libs\MIS.Foundation.Framework.pdb
+E:\Github\OSGI\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.csprojResolveAssemblyReference.cache
+E:\Github\OSGI\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.dll
+E:\Github\OSGI\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.pdb

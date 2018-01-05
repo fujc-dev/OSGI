@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F9F10A2-1E44-4590-86DC-0DD383D7C69E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIS.UI.Framework</RootNamespace>
+    <AssemblyName>MIS.UI.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\MIS.Shell\bin\Debug\Libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPF.Themes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\WPF.Themes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\WPFToolkit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\ExitWindowBehavior.cs" />
+    <Compile Include="Behaviors\MouseDragFrameworkElementBehavior.cs" />
+    <Compile Include="Controls\ExpanderUIItem.xaml.cs">
+      <DependentUpon>ExpanderUIItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISBoxItem.xaml.cs">
+      <DependentUpon>MISBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISImageButton.xaml.cs">
+      <DependentUpon>MISImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISLinkButton.xaml.cs">
+      <DependentUpon>MISLinkButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISLoginButton.xaml.cs">
+      <DependentUpon>MISLoginButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISLoginPassword.xaml.cs">
+      <DependentUpon>MISLoginPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISLoginTextBox.xaml.cs">
+      <DependentUpon>MISLoginTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISPager.xaml.cs">
+      <DependentUpon>MISPager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NavigationUIItem.xaml.cs">
+      <DependentUpon>NavigationUIItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ExpanderUIItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MISBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Corlors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\CustomAccordion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Share.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Themes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\MISImageButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\MISLinkButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\MISLoginButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\MISLoginPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\MISLoginTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\MISPager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\NavigationUIItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\404.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\btnbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\btnbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\btnbg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\buttonbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\c01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\c02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\c03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\cbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\clist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\d07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\diskbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\f01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\f02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\f03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\f04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\f05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\f06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\i09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\iadd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ibtnbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ico01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ico02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ico03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ico04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ico05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ico06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\icon01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\icon02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\icon03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\icon04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\icon05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\icon06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\inputbg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\itabbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\itabbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftico01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftico02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftico03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftico04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftline.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\leftmenubg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\lefttop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\libg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\line.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\line1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\list.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\list1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\list2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginbg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginbg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\logininfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginpassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginsj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\loginuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\msg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\navbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\next.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\pager_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\pager_pre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\pre.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\px.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\righttop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\rlist.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\sj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\t01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\t02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\t03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\t04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\t05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\tbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\tcbg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\th.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\toolbg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\topbg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\topleft.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\topright.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ub1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\uew_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\uew_icon_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\ulist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\userbg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

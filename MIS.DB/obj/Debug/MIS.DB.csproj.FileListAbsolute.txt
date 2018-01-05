@@ -12,3 +12,8 @@ D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MI
 D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.pdb
 D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.dll
 D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.pdb
+D:\Github\OSGI\MIS.DB\bin\Debug\MIS.DB.dll
+D:\Github\OSGI\MIS.DB\bin\Debug\MIS.DB.pdb
+D:\Github\OSGI\MIS.DB\obj\Debug\MIS.DB.csprojResolveAssemblyReference.cache
+D:\Github\OSGI\MIS.DB\obj\Debug\MIS.DB.dll
+D:\Github\OSGI\MIS.DB\obj\Debug\MIS.DB.pdb

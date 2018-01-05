@@ -1,4 +1,5 @@
-﻿using OSGi.NET.Core;
+﻿using MIS.ClientUI.Core;
+using OSGi.NET.Core;
 using OSGi.NET.Event;
 using System;
 using System.Collections.Generic;
@@ -13,39 +14,30 @@ namespace MIS.ClientUI
     /// </summary>
     public class BundleActivator : IBundleActivator
     {
+        /// <summary>
+        /// 当前Bundle上下文实例
+        /// </summary>
+        public static IBundleContext Instance;
         public void Start(IBundleContext context)
         {
+            Instance = context;
             context.ExtensionChanged += ContextOnExtensionChanged;
         }
-
-
 
         public void Stop(IBundleContext context)
         {
         }
 
-
-
+        /// <summary>
+        /// 当其他模块实现了扩展点时，会收到消息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ContextOnExtensionChanged(object sender, OSGi.NET.Event.ExtensionEventArgs e)
         {
-            var stateStr = string.Empty;
-            if (e.GetState() == ExtensionEventArgs.LOAD)
-            {
-                stateStr = "Load";
-            }
-            else
-            {
-                if (e.GetState() == ExtensionEventArgs.UNLOAD)
-                {
-                    stateStr = "UnLoad";
-                }
-            }
-            var extensionStr = new StringBuilder();
-            foreach (var xmlNode in e.GetExtensionData().ExtensionList)
-            {
-                extensionStr.Append(xmlNode.InnerXml);
-            }
-            MessageBox.Show(string.Format("{0} {1} {2} Extension {3}", ((IBundle)sender).GetSymbolicName(), stateStr, e.GetExtensionPoint().Name, extensionStr));
+            var bundle = sender as IBundle;
+            IShellResolveService resolveService = new DefaultShellResolveService(bundle, e.GetExtensionData());
+            Bootstrap.AddShellResolveService(resolveService);
         }
     }
 }

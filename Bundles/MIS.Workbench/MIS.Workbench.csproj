@@ -59,17 +59,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="BundleActivator.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MISWorkbenchBundle.xaml.cs">
+      <DependentUpon>MISWorkbenchBundle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -100,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\icon01.png" />
+    <Resource Include="Resources\tbg.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\leftico01.png" />
@@ -115,6 +111,20 @@
       <Name>OSGi.NET</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\MIS.UI.Framework\MIS.UI.Framework.csproj">
+      <Project>{6f9f10a2-1e44-4590-86dc-0dd383d7c69e}</Project>
+      <Name>MIS.UI.Framework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MISWorkbenchBundle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\list2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

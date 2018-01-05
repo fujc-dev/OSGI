@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Bundle AssemblyName="MIS.ClientUI" StartLevel="1">
   <!--为主窗体插件定义扩展点，为后续子模块扩展-->
-  <ExtensionPoint Point="MIS.Shell.Application" />
+  <ExtensionPoint Point="MIS.Shell.Module" />
+  <!--实现扩展点，用于设置启动页面(目前仅仅是按照约定来构建，还没有设置容错处理)-->
   <Extension Point="MIS.ApplicationService.Startup">
     <Startup Value="MIS.ClientUI.MISLogin" />
   </Extension>
