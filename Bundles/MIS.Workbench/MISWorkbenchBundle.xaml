@@ -1,0 +1,76 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MIS.UI.Framework.Controls;assembly=MIS.UI.Framework" 
+            x:Class="MIS.Workbench.MISWorkbenchBundle" 
+             >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Controls/MISLinkButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Controls/MISBoxItem.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Controls:MISBoxItem Style="{DynamicResource MISDefaultBoxStyle}" Title="数据统计" OpreationValue="更多"/>
+            <Controls:MISBoxItem Style="{DynamicResource MISDefaultBoxStyle}" Title="最新信息" OpreationValue="更多" Grid.Column="1">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="上海自贸区今日正式挂牌成立" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="习近平将访东南亚两国 首次出席APEC峰会" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="最高法:谎称炸弹致航班备降者从重追刑责" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="华北大部遭遇雾霾天 北京全城陷重污染" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content='"环保专家"董良杰涉嫌寻衅滋事被刑拘' HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="中央巡视组：重庆对一把手监督不到位  " HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="囧!悍马没改好成华丽马车(图)" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Controls:MISBoxItem>
+        </Grid>
+        <Grid Margin="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="1*"/>
+                <ColumnDefinition  Width="1*"/>
+                <ColumnDefinition  Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Controls:MISBoxItem Style="{DynamicResource MISDefaultBoxStyle}" Title="信息统计" OpreationValue="更多" Grid.Column="2">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="会员数：2535462" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="文档数： 5546" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="普通文章：2315" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content="软件：1585" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}" Content='评论数：5342' HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        </StackPanel>
+                </ScrollViewer>
+            </Controls:MISBoxItem>
+            <Controls:MISBoxItem Style="{DynamicResource MISDefaultBoxStyle}" Title="常用工具" OpreationValue="添加" Grid.Column="1"/>
+            <Controls:MISBoxItem Style="{DynamicResource MISDefaultBoxStyle}" Title="待办事项" OpreationValue="更多">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01"   Content="上海自贸区今日正式挂牌成立" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01" Content="习近平将访东南亚两国 首次出席APEC峰会" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01"   Content="最高法:谎称炸弹致航班备降者从重追刑责" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01"   Content="华北大部遭遇雾霾天 北京全城陷重污染" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01"   Content='"环保专家"董良杰涉嫌寻衅滋事被刑拘' HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01"   Content="中央巡视组：重庆对一把手监督不到位  " HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                        <Controls:MISLinkButton Style="{DynamicResource DefaultLinkButton4Style}"  ValueEx="10-01"   Content="囧!悍马没改好成华丽马车(图)" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Controls:MISBoxItem>
+        </Grid>
+
+    </Grid>
+</UserControl>

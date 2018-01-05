@@ -1,0 +1,43 @@
+﻿<ResourceDictionary               
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mis="clr-namespace:MIS.UI.Framework.Controls"
+             mc:Ignorable="d" >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MIS.UI.Framework;component/Controls/MISLinkButton.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="MISDefaultBoxStyle" TargetType="{x:Type mis:MISBoxItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type mis:MISBoxItem}">
+                    <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" BorderThickness="1" BorderBrush="#FFD3DBDE" Width="Auto" Height="Auto">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Border BorderBrush="#FFD3DBDE" BorderThickness="0,0,0,1">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="../Assets/images/tbg.png"/>
+                                </Border.Background>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="120"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="PART_Title" TextWrapping="Wrap" Text="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Title}" Margin="10,7.687,0,7.687" HorizontalAlignment="Left" VerticalAlignment="Center" Height="18.626" Width="75.867" FontSize="12"/>
+                                    <mis:MISLinkButton x:Name="PART_Opration" Style="{DynamicResource DefaultLinkButtonStyle }" Content="{Binding RelativeSource={RelativeSource TemplatedParent},Path=OpreationValue}"  Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Center" Height="Auto" Width="Auto" FontSize="12"/>
+                                </Grid>
+                            </Border>
+                            <ContentPresenter HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0" Grid.Row="1"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
