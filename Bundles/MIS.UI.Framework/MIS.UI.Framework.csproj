@@ -200,8 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\images\404.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\images\add.png" />
   </ItemGroup>
   <ItemGroup>

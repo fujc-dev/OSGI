@@ -94,8 +94,6 @@
     <Compile Include="Logs\Log4NetLog.cs" />
     <Compile Include="Logs\Log4NetLogFactory.cs" />
     <Compile Include="Logs\LogFactoryBase.cs" />
-    <Compile Include="MesageQueues\IMessage.cs" />
-    <Compile Include="MesageQueues\IPusher.cs" />
     <Compile Include="Queues\IMessageBus.cs">
       <SubType>Code</SubType>
     </Compile>
